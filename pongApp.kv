@@ -3,28 +3,35 @@
 <PongBall>:
     size: 50, 50 
     canvas:
-        Ellipse:
+        Color :
+            rgba : 1, 1, 1, 1
+        Rectangle:
+            source : 'C:/Users/Ynot/Downloads/ping.png'
             pos: self.pos
-            size: self.size          
+            size: self.size
+#sa position change et Kivy redessine automatiquement l'ellipse au bon endroit à chaque image.         
 
 <PongPaddle>:
     size: 25, 200
     canvas:
+        Color :
+            rgba : 1, 1, 0, 1
         Rectangle:
             pos: self.pos
             size: self.size
+          
 
 <PongGame>:
     ball: pong_ball
     player1: player_left
     player2: player_right
-    
+   
     canvas:
         Rectangle:
             pos: self.center_x - 5, 0
-            size: 10, self.height
+            size: 10,self.height #taille de la ligne verticale  
     
-    Label:
+    Label: #composant textuel
         font_size: 70  
         center_x: root.width / 4
         top: root.top - 50
