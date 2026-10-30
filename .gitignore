@@ -1,1 +1,6 @@
 kivy_venv/
+kivy-deps-build/
+__pycache__/
+*.py[cod]
+.buildozer/
+bin/
